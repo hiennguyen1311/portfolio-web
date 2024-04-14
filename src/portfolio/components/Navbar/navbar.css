@@ -1,0 +1,11 @@
+.button {
+  width: 125px;
+  border-radius: 26px;
+  background-color: #d37676;
+  height: 50px;
+}
+.btn-title {
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}

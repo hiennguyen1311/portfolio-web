@@ -7,12 +7,16 @@
     "target": "es6",
     "jsx": "react",
     "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "include": [
     "./src/**/*.ts",
     "src",
   ],
-  "esModuleInterop": true,
   "references": [ { "path": "src", "prepend": true } ], 
-  "allowImportingTsExtensions": true
+  "allowImportingTsExtensions": true,
+  "baseUrl": "./src",
+  "paths": {
+      "@modules/*": ["rest/modules/*"],
+  },
 }

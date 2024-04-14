@@ -1,0 +1,10 @@
+{
+  "GLOBAL": {
+    "MISSING_TRANSLATION": "**MISSING_TRANSLATION**",
+    "OK": "Ok",
+    "CANCEL": "Cancel"
+  },
+  "DATA": {
+    "INTRODUCTION": "With a solid 7-year background in software development, I've honed my skills both as a mobile developer proficient in React Native and a backend working with NodeJS, .NET, and Java. My expertise extends to various databases like MySQL, PostgreSQL, Firebase Firestore, MongoDB, and Parse. Throughout my career, I've collaborated with diverse clients across Asia (Singapore, Japan, Indonesia) and Europe (France), the United States. Beyond technical capacity, I excel in collaborative team environments, working harmoniously with fellow developers and stakeholders. Looking forward, my goal is to ascend to the role of a technical architect within the next 5 years."
+  }
+}
