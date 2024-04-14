@@ -19,10 +19,24 @@ function Home() {
         }}
       >
         <div className="avatar-view">
-          <Image className="avatar" src={AVATAR_IMAGE} />
+          <Image
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+            src={AVATAR_IMAGE}
+          />
         </div>
         <div className="header-content">
-          <Title style={{ color: "#FFF" }} className="name-sub-title">
+          <Title
+            style={{
+              color: "#FFF",
+              fontWeight: 800,
+              fontSize: 40,
+              textAlign: "left",
+            }}
+            className="name-sub-title"
+          >
             {"HI THERE!"}
           </Title>
           <Title
@@ -32,26 +46,30 @@ function Home() {
               width: "100%",
               display: "flex",
               alignItems: "center",
-              marginTop: -50,
+              marginTop: -60,
+              fontWeight: 800,
+              fontSize: 50,
+              textAlign: "left",
             }}
             className="name"
           >
-            <Title style={{ color: "#FFF", marginRight: 20 }} className="name">
+            <Title
+              style={{ color: "#FFF", marginRight: 20, fontSize: 50 }}
+              className="name"
+            >
               {"I'M"}
             </Title>
             {NAME}
           </Title>
 
-          <Box className="job-title">
-            <Title className="job-title-text">
+          <div className="job-title">
+            <Title style={{ color: "#fff" }}>
               {"SENIOR SOFTWARE ENGINEER"}
             </Title>
-          </Box>
+          </div>
 
           <div style={{ marginTop: 20, width: "70%" }}>
-            <Title className="header-description">
-              {i18n.t("DATA.INTRODUCTION")}
-            </Title>
+            <p className="header-description">{i18n.t("DATA.INTRODUCTION")}</p>
           </div>
         </div>
       </div>
