@@ -12,6 +12,20 @@ export default defineConfig({
   build: {
     outDir: 'build',
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          let extType =
+            (assetInfo?.name ? assetInfo?.name : '').split('.').at(1) ?? '';
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = 'img';
+          }
+          return `assets/${extType}/[name]-[hash][extname]`;
+        },
+        chunkFileNames: 'porfolio_assets/[name]-[hash].js',
+        entryFileNames: 'porfolio_assets/[name]-[hash].js',
+      },
+    },
   },
   plugins: [react()],
   server: { port: Number(process.env.PORT) },
