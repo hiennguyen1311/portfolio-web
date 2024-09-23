@@ -1,11 +1,11 @@
 import { routeList } from '@constants';
-import { MainConversationsPage } from '@/pages/conversations';
+import { MainPage } from '../pages/main';
 import { RouteObject } from 'react-router-dom';
 
 export const mainRoutesList: RouteObject[] = [
-  { index: true, element: <MainConversationsPage></MainConversationsPage> },
+  { index: true, element: <MainPage></MainPage> },
   {
     path: routeList.main,
-    element: <MainConversationsPage></MainConversationsPage>,
+    element: <MainPage></MainPage>,
   },
 ];
