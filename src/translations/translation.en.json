@@ -1,0 +1,35 @@
+{
+  "global": {
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "app_name": "PuHi Chatbot",
+    "page_not_found": "Page not found",
+    "creating_magic": "PuHi is creating magic!!"
+  },
+  "error": {
+    "field_required": "{{field}} is required",
+    "field_invalid": "{{field}} is invalid"
+  },
+  "authentication": {
+    "sign_in_with": "Sign In with {{value}}",
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "failed": "Login Failed!!!"
+  },
+  "main_conversations": {
+    "new_conversation": "New Conversation"
+  },
+  "profile": {
+    "logout": "Logout"
+  },
+  "messages": {
+    "error": "PuHi cannot create magic! Please try again!",
+    "model": "Model"
+  },
+  "conversations": {
+    "rename": "Rename",
+    "delete": "Delete",
+    "update_name": "Update Name"
+  }
+}

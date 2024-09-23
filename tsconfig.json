@@ -1,22 +1,30 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es6",
-    "jsx": "react",
+    "allowJs": true,
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "skipLibCheck": true,
+    "useDefineForClassFields": true,
+    "jsx": "react-jsx",
+    "target": "ES2022",
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "composite": true,
   },
-  "include": [
-    "./src/**/*.ts",
-    "src",
-  ],
-  "references": [ { "path": "src", "prepend": true } ], 
-  "allowImportingTsExtensions": true,
-  "baseUrl": "./src",
-  "paths": {
-      "@modules/*": ["rest/modules/*"],
-  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
 }
