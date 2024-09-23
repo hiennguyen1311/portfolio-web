@@ -18,34 +18,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "composite": true,
-
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@components": ["src/components/index.ts"],
-      "@components/*": ["src/components/*"],
-      "@pages": ["src/pages/index.ts"],
-      "@pages/*": ["src/pages/*"],
-      "@routes": ["src/routes/routes.index.ts"],
-      "@routes/*": ["src/routes/*"],
-      "@themes": ["src/themes/themes.index.ts"],
-      "@themes/*": ["src/themes/*"],
-      "@translations": ["src/translations/translations.index.ts"],
-      "@translations/*": ["src/translations/*"],
-      "@constants": ["src/constants/constants.index.ts"],
-      "@constants/*": ["src/constants/*"],
-      "@models": ["src/models/models.index.ts"],
-      "@models/*": ["src/models/*"],
-      "@services": ["src/services/services.index.ts"],
-      "@services/*": ["src/services/*"],
-      "@reducers": ["src/reducers/reducers.index.tsx"],
-      "@reducers/*": ["src/reducers/*"],
-      "@utils": ["src/utils/utils.index.ts"],
-      "@utils/*": ["src/utils/*"],
-      "@configs": ["src/configs/configs.index.ts"],
-      "@configs/*": ["src/configs/*"]
-    }
+    "composite": true
   },
   "include": ["vite.config.ts"]
 }
