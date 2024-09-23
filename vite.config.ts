@@ -38,6 +38,7 @@ export default defineConfig({
       '@reducers': path.resolve(__dirname, './src/reducers/reducers.index.ts'),
       '@utils': path.resolve(__dirname, './src/utils/utils.index.ts'),
       '@configs': path.resolve(__dirname, './src/configs/configs.index.ts'),
+      '@data': path.resolve(__dirname, './src/data'),
     },
   },
 });
