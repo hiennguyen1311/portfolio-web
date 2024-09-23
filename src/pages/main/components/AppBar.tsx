@@ -48,6 +48,7 @@ export default function AppBar({ open, onOpen, isLoading }: AppBarProps) {
           aria-label="open drawer"
           onClick={onOpen}
           edge="start"
+          sx={open ? { display: 'none' } : {}}
         >
           <MenuIcon />
         </IconButton>
