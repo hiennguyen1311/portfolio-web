@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import { drawerWidth } from '../configs';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+import MenuIcon from '@mui/icons-material/Menu';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -47,7 +48,9 @@ export default function AppBar({ open, onOpen, isLoading }: AppBarProps) {
           aria-label="open drawer"
           onClick={onOpen}
           edge="start"
-        ></IconButton>
+        >
+          <MenuIcon />
+        </IconButton>
         <Box></Box>
         <Stack direction={'row'}></Stack>
       </Toolbar>
