@@ -6,4 +6,5 @@ export const routeList = {
     logout: 'logout',
   },
   home: 'home',
+  contacts: 'contacts',
 };

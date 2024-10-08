@@ -29,5 +29,8 @@
     "read_more": "Read More",
     "working_progress": "Working Progress",
     "education_certification": "Education & Certification"
+  },
+  "contacts": {
+    "explore": "Explore"
   }
 }

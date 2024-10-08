@@ -11,7 +11,7 @@ import {
 import { drawerWidth, navMenu } from '../configs';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { isEqual } from 'lodash';
 import { amber, teal } from '@mui/material/colors';
 
@@ -48,10 +48,12 @@ const StyledAppBar = styled(MuiAppBar, {
 export default function AppBar({ open, isLoading }: AppBarProps) {
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
 
-  function NavItem(title: string, selected: boolean) {
+  function NavItem(title: string, selected: boolean, key: string) {
     return (
       <ButtonBase
+        onClick={() => navigate(`./${key}`)}
         sx={{
           textAlign: 'center',
           paddingTop: 1,
@@ -98,6 +100,7 @@ export default function AppBar({ open, isLoading }: AppBarProps) {
                 {NavItem(
                   item.title,
                   isEqual(`/${item.key}`, location.pathname),
+                  item.key,
                 )}
               </ListItem>
             ))}

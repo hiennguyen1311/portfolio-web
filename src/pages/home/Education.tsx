@@ -1,6 +1,7 @@
 import { homeData } from '@data';
 import { Box, Grid2, List, ListItem, Stack, Typography } from '@mui/material';
 import { amber, teal } from '@mui/material/colors';
+import { map, reverse } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 export default function Education() {
@@ -11,11 +12,11 @@ export default function Education() {
       <Grid2 container display={'flex'}>
         <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }}>
           <List disablePadding>
-            <Grid2 container>
-              {homeData.educations.map((item) => (
-                <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }} paddingBottom={2}>
+            <Grid2 container spacing={4}>
+              {map(reverse([...homeData.educations]), (item) => (
+                <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }}>
                   <ListItem key={item.title} disablePadding>
-                    <Stack spacing={0.5}>
+                    <Stack spacing={1}>
                       <Typography
                         sx={{
                           fontFamily: 'serif',

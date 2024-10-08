@@ -4,7 +4,7 @@ import Introduction from './Introduction';
 import Education from './Education';
 import WorkingProgress from './WorkingProgress';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Box sx={{ background: teal[900], width: '100%' }}>
       <Introduction></Introduction>

@@ -1,3 +1,13 @@
+import {
+  Email,
+  Facebook,
+  Instagram,
+  Language,
+  LinkedIn,
+  Pinterest,
+  X,
+  YouTube,
+} from '@mui/icons-material';
 import avatar from './assets/avatar.png';
 
 export const homeData = {
@@ -62,4 +72,54 @@ export const homeData = {
   ],
   educatuionDescription:
     'I hold a Bachelor’s degree in Computer Science from Ton Duc Thang University, where I graduated in 2018. My academic journey has laid a solid foundation in Information Technology, equipping me with both theoretical knowledge and practical expertise. I am proficient in English, validated by my TOEIC certification, which has enabled me to effectively communicate and collaborate in diverse environments. A lifelong learner, I thrive on acquiring new skills—both technical and soft. Recently, I have focused on enhancing my technical expertise through cloud certification courses, further expanding my capabilities in the rapidly evolving tech landscape. My dedication to continuous improvement allows me to adapt to new challenges and contribute effectively in a team-oriented setting.',
+};
+
+export const contactData = {
+  data: [
+    {
+      key: 'website',
+      icon: Language,
+      content: 'http://nguyenphuchien.me',
+    },
+    {
+      key: 'email',
+      icon: Email,
+      content: 'nguyenphuchien1996@gmail.com',
+    },
+    {
+      key: 'facebook',
+      icon: Facebook,
+      content: 'https://facebook.com',
+    },
+    {
+      key: 'youtube',
+      icon: YouTube,
+      content: 'https://youtube.com',
+    },
+    {
+      key: 'linkedin',
+      icon: LinkedIn,
+      content: 'https://linkedin.com',
+    },
+    {
+      key: 'tiktok',
+      icon: LinkedIn,
+      content: 'https://tiktok.com',
+    },
+    {
+      key: 'instagram',
+      icon: Instagram,
+      content: 'https://instagram.com',
+    },
+    {
+      key: 'x',
+      icon: X,
+      content: 'https://x.com',
+    },
+    {
+      key: 'pinterst',
+      icon: Pinterest,
+      content: 'https://pinterest.com',
+    },
+  ],
 };

@@ -1,6 +1,7 @@
 import { homeData } from '@data';
 import { Box, Grid2, List, ListItem, Stack, Typography } from '@mui/material';
 import { amber, teal } from '@mui/material/colors';
+import { map, reverse } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 export default function WorkingProgress() {
@@ -38,7 +39,7 @@ export default function WorkingProgress() {
         </Grid2>
         <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }} paddingLeft={6}>
           <List disablePadding>
-            {homeData.workingExperience.map((item, index) => (
+            {map(reverse([...homeData.workingExperience]), (item, index) => (
               <ListItem key={item.year} disablePadding>
                 <Stack spacing={3} direction={'row'}>
                   <Stack alignItems={'center'} spacing={1} paddingBottom={1}>
