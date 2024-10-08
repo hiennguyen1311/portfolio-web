@@ -1,13 +1,5 @@
 import { homeData } from '@data';
-import {
-  Box,
-  Divider,
-  Grid2,
-  List,
-  ListItem,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Box, Grid2, List, ListItem, Stack, Typography } from '@mui/material';
 import { amber, teal } from '@mui/material/colors';
 import { useTranslation } from 'react-i18next';
 

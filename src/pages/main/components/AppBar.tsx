@@ -1,11 +1,8 @@
 import {
   Box,
   ButtonBase,
-  IconButton,
   LinearProgress,
   ListItem,
-  ListItemButton,
-  ListItemText,
   Stack,
   styled,
   Toolbar,
@@ -13,11 +10,10 @@ import {
 } from '@mui/material';
 import { drawerWidth, navMenu } from '../configs';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import MenuIcon from '@mui/icons-material/Menu';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { isEqual } from 'lodash';
-import { amber, blue, green, teal } from '@mui/material/colors';
+import { amber, teal } from '@mui/material/colors';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -49,7 +45,7 @@ const StyledAppBar = styled(MuiAppBar, {
   ],
 }));
 
-export default function AppBar({ open, onOpen, isLoading }: AppBarProps) {
+export default function AppBar({ open, isLoading }: AppBarProps) {
   const { t } = useTranslation();
   const location = useLocation();
 

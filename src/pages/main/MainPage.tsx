@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import SideBar from './components/SideBar';
+// import SideBar from './components/SideBar';
 import AppBar from './components/AppBar';
 import useMain from './useMain';
 import { Outlet } from 'react-router-dom';
