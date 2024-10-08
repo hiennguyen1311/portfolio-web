@@ -1,9 +1,9 @@
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import SideBar from './components/SideBar';
-import { drawerWidth } from './configs';
 import AppBar from './components/AppBar';
 import useMain from './useMain';
+import { Outlet } from 'react-router-dom';
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   open?: boolean;
@@ -11,13 +11,12 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
   display: 'flex',
   flexDirection: 'column',
   overflow: 'hidden',
-  height: '100vh',
   width: '100%',
+  paddingTop: '70px',
   transition: theme.transitions.create('margin', {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  marginLeft: `-${drawerWidth}px`,
   variants: [
     {
       props: ({ open }) => open,
@@ -43,11 +42,13 @@ export default function MainPage() {
         onOpen={sidebar.onOpen}
       ></AppBar>
 
-      <SideBar {...sidebar}>
+      {/* <SideBar {...sidebar}>
         <Box></Box>
-      </SideBar>
+      </SideBar> */}
 
-      <Main open={sidebar.open}></Main>
+      <Main open={sidebar.open}>
+        <Outlet></Outlet>
+      </Main>
     </Box>
   );
 }

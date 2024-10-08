@@ -1,11 +1,12 @@
 import { routeList } from '@constants';
-import { MainPage } from '../pages/main';
 import { RouteObject } from 'react-router-dom';
+import { Home } from '@pages';
+import { DefaultRoute } from './DefaultRoute';
 
 export const mainRoutesList: RouteObject[] = [
-  { index: true, element: <MainPage></MainPage> },
+  { index: true, element: <DefaultRoute></DefaultRoute> },
   {
-    path: routeList.main,
-    element: <MainPage></MainPage>,
+    path: routeList.home,
+    element: <Home></Home>,
   },
 ];

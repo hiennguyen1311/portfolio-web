@@ -75,7 +75,7 @@ export default function SideBar({ children, open, onClose }: SideBarProps) {
       anchor={'left'}
       open={open}
       onClose={onClose}
-      variant="permanent"
+      variant="persistent"
       ModalProps={{
         keepMounted: true, // Better open performance on mobile.
       }}

@@ -17,7 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    
+
     "composite": true,
 
     "baseUrl": ".",
@@ -44,7 +44,9 @@
       "@utils": ["src/utils/utils.index.ts"],
       "@utils/*": ["src/utils/*"],
       "@configs": ["src/configs/configs.index.ts"],
-      "@configs/*": ["src/configs/*"]
+      "@configs/*": ["src/configs/*"],
+      "@data": ["src/data/index.ts"],
+      "@data/*": ["src/data/*"]
     }
   },
   "include": ["vite.config.ts"]

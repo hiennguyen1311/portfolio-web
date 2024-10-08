@@ -1,14 +1,23 @@
 import {
   Box,
+  ButtonBase,
   IconButton,
   LinearProgress,
+  ListItem,
+  ListItemButton,
+  ListItemText,
   Stack,
   styled,
   Toolbar,
+  Typography,
 } from '@mui/material';
-import { drawerWidth } from '../configs';
+import { drawerWidth, navMenu } from '../configs';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import { isEqual } from 'lodash';
+import { amber, blue, green, teal } from '@mui/material/colors';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -20,6 +29,7 @@ const StyledAppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
+  backgroundColor: teal[900],
   transition: theme.transitions.create(['margin', 'width'], {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
@@ -40,20 +50,65 @@ const StyledAppBar = styled(MuiAppBar, {
 }));
 
 export default function AppBar({ open, onOpen, isLoading }: AppBarProps) {
+  const { t } = useTranslation();
+  const location = useLocation();
+
+  function NavItem(title: string, selected: boolean) {
+    return (
+      <ButtonBase
+        sx={{
+          textAlign: 'center',
+          paddingTop: 1,
+          paddingBottom: 1,
+          ...(selected && {
+            backgroundColor: amber[700],
+            borderRadius: 25,
+            paddingLeft: 3,
+            paddingRight: 3,
+          }),
+        }}
+      >
+        <Typography
+          sx={{
+            fontWeight: '400',
+            fontSize: 15,
+            fontFamily: 'sans-serif',
+            ...(selected && { color: 'black', fontWeight: '600' }),
+          }}
+        >
+          {t(title)}
+        </Typography>
+      </ButtonBase>
+    );
+  }
+
   return (
     <StyledAppBar position="fixed" open={open}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <IconButton
+        {/* <IconButton
           color="inherit"
           aria-label="open drawer"
           onClick={onOpen}
           edge="start"
         >
           <MenuIcon />
-        </IconButton>
+        </IconButton> */}
         <Box></Box>
-        <Stack direction={'row'}></Stack>
+
+        <Stack direction={'row'}>
+          <ListItem>
+            {navMenu.map((item) => (
+              <ListItem key={item.key}>
+                {NavItem(
+                  item.title,
+                  isEqual(`/${item.key}`, location.pathname),
+                )}
+              </ListItem>
+            ))}
+          </ListItem>
+        </Stack>
       </Toolbar>
+
       {isLoading && (
         <Box sx={{ width: '100%' }}>
           <LinearProgress />
