@@ -10,7 +10,7 @@ export const homeData = {
     {
       year: '2017',
       companyName: 'System.EXE',
-      title: 'Software Engineer Intership',
+      title: 'Software Engineer Internship',
       content:
         'During my internship as a software engineer at a Japanese company, I collaborated with cross-functional teams to design and develop software applications tailored to client needs. My responsibilities included participating in daily stand-ups, conducting code reviews, and performing testing and debugging to enhance system performance. This experience not only strengthened my technical skills but also deepened my understanding of Agile methodologies and effective teamwork in a multicultural environment.',
     },

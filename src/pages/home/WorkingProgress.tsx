@@ -54,12 +54,24 @@ export default function WorkingProgress() {
                       {item.year}
                     </Typography>
 
-                    {index < homeData.workingExperience.length - 1 && (
+                    {index >= 0 && (
                       <Box
                         sx={{
                           backgroundColor: teal[900],
                           width: '2px',
                           height: '100%',
+                        }}
+                      ></Box>
+                    )}
+                    {index == homeData.workingExperience.length - 1 && (
+                      <Box
+                        sx={{
+                          borderRadius: '50%',
+                          width: 10,
+                          height: 10,
+                          aspectRatio: 1,
+                          backgroundColor: teal[900],
+                          top: '40px',
                         }}
                       ></Box>
                     )}
