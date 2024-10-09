@@ -1,10 +1,8 @@
 import {
-  Email,
   Facebook,
   Instagram,
   Language,
   LinkedIn,
-  Pinterest,
   X,
   YouTube,
 } from '@mui/icons-material';
@@ -13,7 +11,7 @@ import avatar from './assets/avatar.png';
 export const homeData = {
   name: 'Nguyen Phuc Hien',
   description:
-    'As a dedicated software engineer, I have successfully supported clients from various countries by providing consulting services and implementing applications across multiple roles. My expertise spans a wide range of projects, allowing me to contribute to the development of various types of products. I take pride in understanding client needs and translating them into effective, tailored solutions. With a strong focus on collaboration and innovation, I thrive in dynamic environments, continuously striving to enhance my skills and provide exceptional value to the teams I work with and the clients I serve...',
+    'As a dedicated software engineer, I have successfully supported clients from various countries by providing consulting services and implementing applications across multiple roles. My expertise spans a wide range of projects, allowing me to contribute to the development of various types of products. I take pride in understanding client needs and translating them into effective, tailored solutions. With a strong focus on collaboration and innovation, I thrive in dynamic environments, continuously striving to enhance my skills and provide exceptional value to the teams I work with and the clients I serve',
   avatar,
   workingDescription: `With a solid 7-year background in software development, I've honed my skills both as a mobile developer proficient in React Native and a backend working with NodeJS, .NET, and Java. My expertise extends to various databases like MySQL, PostgreSQL, Firebase Firestore, MongoDB, and Parse. Throughout my career, I've collaborated with diverse clients across Asia (Singapore, Japan, Indonesia) and Europe (France), the United States. Beyond technical capacity, I excel in collaborative team environments, working harmoniously with fellow developers and stakeholders. Looking forward, my goal is to ascend to the role of a technical architect within the next 5 years.`,
   workingExperience: [
@@ -82,11 +80,6 @@ export const contactData = {
       content: 'http://nguyenphuchien.me',
     },
     {
-      key: 'email',
-      icon: Email,
-      content: 'nguyenphuchien1996@gmail.com',
-    },
-    {
       key: 'facebook',
       icon: Facebook,
       content: 'https://facebook.com',
@@ -116,10 +109,56 @@ export const contactData = {
       icon: X,
       content: 'https://x.com',
     },
-    {
-      key: 'pinterst',
-      icon: Pinterest,
-      content: 'https://pinterest.com',
-    },
   ],
+  email: 'nguyenphuchien1996@gmail.com',
+  phone: '(+84) 766 494 666',
 };
+
+export const skillData = [
+  {
+    title: 'OS',
+    content: ['MacOS', 'Windows', 'Linux', 'Android', 'IOS'],
+  },
+  {
+    title: 'Development IDEs',
+    content: ['Visual Studio', 'VS Code', 'Eclipse', 'Xcode', 'Android Studio'],
+  },
+  {
+    title: 'Database',
+    content: ['SQL server', 'MySQL', 'MongoDB', 'Firestore'],
+  },
+  {
+    title: 'Programming Language',
+    content: [
+      'Javascript',
+      'Typescript ES6',
+      'Java',
+      '.NET',
+      'Swift',
+      'Kotlin',
+    ],
+  },
+  {
+    title: 'Framework',
+    content: [
+      'React Native',
+      'ReactJS',
+      'NodeJS/NestJS',
+      'VueJS',
+      'Ionic',
+      'Angular',
+    ],
+  },
+  {
+    title: 'SCM',
+    content: ['Git', 'SVN'],
+  },
+  {
+    title: 'Software Development Process',
+    content: ['Waterfall', 'Scrum/Agile', 'SOLID'],
+  },
+  {
+    title: 'Principle',
+    content: ['OWASP', 'UML', 'C4 model', 'Sequence Diagram', 'Class Diagram'],
+  },
+];

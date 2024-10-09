@@ -1,4 +1,4 @@
-import { homeData } from '@data';
+import { homeData, skillData } from '@data';
 import { Box, Grid2, List, ListItem, Stack, Typography } from '@mui/material';
 import { amber, teal } from '@mui/material/colors';
 import { map, reverse } from 'lodash';
@@ -35,6 +35,60 @@ export default function WorkingProgress() {
             >
               {homeData.workingDescription}
             </Typography>
+            <Typography
+              sx={{
+                fontFamily: 'serif',
+                fontWeight: 800,
+                fontSize: 35,
+                color: teal[900],
+                textDecoration: 'underline',
+              }}
+            >
+              {t('porfolio.working_experience')}
+            </Typography>
+
+            <List disablePadding>
+              {skillData.map((item) => (
+                <ListItem disablePadding>
+                  <Stack direction={'row'} spacing={1.5}>
+                    <Box
+                      sx={{
+                        borderRadius: '50%',
+                        width: 5,
+                        height: 5,
+                        aspectRatio: 1,
+                        backgroundColor: teal[900],
+                        top: '17px',
+                        position: 'absolute',
+                      }}
+                    ></Box>
+                    <Typography
+                      sx={{
+                        fontFamily: 'serif',
+                        fontWeight: 800,
+                        fontSize: 20,
+                        color: teal[900],
+                        lineHeight: 2,
+                      }}
+                    >
+                      {item.title}
+                      {':'}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: 'serif',
+                        fontWeight: 400,
+                        fontSize: 20,
+                        color: teal[900],
+                        lineHeight: 2,
+                      }}
+                    >
+                      {item.content.join(', ')}
+                    </Typography>
+                  </Stack>
+                </ListItem>
+              ))}
+            </List>
           </Stack>
         </Grid2>
         <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }} paddingLeft={6}>
@@ -102,15 +156,14 @@ export default function WorkingProgress() {
                       {item.title}
                     </Typography>
                     <Stack direction={'row'} spacing={1}>
-                      <Box sx={{ paddingTop: 1 }}>
+                      <Box sx={{ paddingTop: 1.25 }}>
                         <Box
                           sx={{
                             borderRadius: '50%',
-                            width: 10,
-                            height: 10,
+                            width: 5,
+                            height: 5,
                             aspectRatio: 1,
                             backgroundColor: teal[900],
-                            top: '40px',
                           }}
                         ></Box>
                       </Box>

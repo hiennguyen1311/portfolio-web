@@ -28,9 +28,13 @@
     "services": "Services",
     "read_more": "Read More",
     "working_progress": "Working Progress",
-    "education_certification": "Education & Certification"
+    "education_certification": "Education & Certification",
+    "go_to_home": "Go to Home"
   },
   "contacts": {
     "explore": "Explore"
+  },
+  "porfolio": {
+    "working_experience": "Working Experience"
   }
 }

@@ -1,11 +1,8 @@
 import { homeData } from '@data';
-import { Box, Button, Grid2, Stack, Typography } from '@mui/material';
+import { Box, Grid2, Stack, Typography } from '@mui/material';
 import { amber, teal } from '@mui/material/colors';
-import { useTranslation } from 'react-i18next';
 
 export default function Introduction() {
-  const { t } = useTranslation();
-
   return (
     <Box
       sx={{
@@ -45,18 +42,6 @@ export default function Introduction() {
                 {homeData.description}
               </Typography>
             </Box>
-            <Button
-              sx={{
-                borderRadius: 15,
-                backgroundColor: amber[700],
-                paddingLeft: 2,
-                paddingRight: 2,
-              }}
-            >
-              <Typography sx={{ fontWeight: 600, color: 'black' }}>
-                {t('home.read_more')}
-              </Typography>
-            </Button>
           </Stack>
         </Grid2>
 

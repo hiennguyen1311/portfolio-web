@@ -7,4 +7,5 @@ export const routeList = {
   },
   home: 'home',
   contacts: 'contacts',
+  portfolio: 'portfolio',
 };
