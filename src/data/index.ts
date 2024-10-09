@@ -49,6 +49,9 @@ export const homeData = {
       title: 'Senior Software Engineer',
       content:
         'As a technical leader, I spearheaded projects for a diverse range of clients from the U.S., Canada, Japan, and various European countries, focusing on developing applications across multiple fields, including finance, healthcare, and technology. My responsibilities included defining technical strategies, overseeing architecture design, and ensuring the delivery of high-quality software solutions. I facilitated collaboration among cross-functional teams, mentored engineers, and conducted code reviews to uphold best practices. Additionally, I engaged with clients to understand their needs and provided technical guidance throughout the project lifecycle, ensuring successful and timely outcomes.',
+      details: [
+        'Develop application and implement features in front-end side and back-end side',
+      ],
     },
   ],
   educations: [

@@ -1,7 +1,11 @@
 import { homeData, productsData, skillData } from '@data';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Box,
   Grid2,
+  Link,
   List,
   ListItem,
   Stack,
@@ -11,10 +15,20 @@ import {
 import { amber, teal } from '@mui/material/colors';
 import { map, reverse } from 'lodash';
 import { useTranslation } from 'react-i18next';
+import { makeStyles } from '@mui/styles';
+
+const useStyles = makeStyles({
+  hideBorder: {
+    '&.MuiExpansionPanel-root:before': {
+      display: 'none',
+    },
+  },
+});
 
 export default function WorkingProgress() {
   const { t } = useTranslation();
   const theme = useTheme();
+  const classes = useStyles();
 
   return (
     <Box padding={5} paddingTop={4} sx={{ backgroundColor: amber[50] }}>
@@ -260,6 +274,73 @@ export default function WorkingProgress() {
                         {item.content}
                       </Typography>
                     </Stack>
+                    {item.details && (
+                      <Accordion
+                        elevation={0}
+                        className={classes.hideBorder}
+                        style={{
+                          backgroundColor: 'transparent',
+                          boxShadow: 'none',
+                          border: '1px solid transparent',
+                        }}
+                        sx={{
+                          '&:before': { height: '0px' },
+                        }}
+                      >
+                        <AccordionSummary
+                          sx={{
+                            border: 'none',
+                            padding: 0,
+                            paddingLeft: 1.5,
+                            paddingRight: 1.5,
+                            height: 20,
+                            minHeight: 20,
+                            '&.Mui-expanded': {
+                              minHeight: 20,
+                            },
+                          }}
+                        >
+                          <Link
+                            sx={{
+                              fontSize: 15,
+                              fontFamily: 'sans-serif',
+                              fontWeight: 600,
+                            }}
+                            color={'secondary'}
+                          >
+                            {t('porfolio.see_details')}
+                          </Link>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <Box paddingLeft={2} paddingRight={2}>
+                            {item.details?.map((item) => (
+                              <Stack direction={'row'} spacing={1}>
+                                <Box paddingTop={1}>
+                                  <Box
+                                    sx={{
+                                      width: 5,
+                                      height: 5,
+                                      aspectRatio: 1,
+                                      backgroundColor: teal[900],
+                                    }}
+                                  ></Box>
+                                </Box>
+                                <Typography
+                                  color={'primary'}
+                                  sx={{
+                                    fontFamily: 'serif',
+                                    fontSize: 15,
+                                    textAlign: 'justify',
+                                  }}
+                                >
+                                  {item}
+                                </Typography>
+                              </Stack>
+                            ))}
+                          </Box>
+                        </AccordionDetails>
+                      </Accordion>
+                    )}
                   </Stack>
                 </Stack>
               </ListItem>
