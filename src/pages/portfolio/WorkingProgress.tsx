@@ -1,11 +1,20 @@
-import { homeData, skillData } from '@data';
-import { Box, Grid2, List, ListItem, Stack, Typography } from '@mui/material';
+import { homeData, productsData, skillData } from '@data';
+import {
+  Box,
+  Grid2,
+  List,
+  ListItem,
+  Stack,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import { amber, teal } from '@mui/material/colors';
 import { map, reverse } from 'lodash';
 import { useTranslation } from 'react-i18next';
 
 export default function WorkingProgress() {
   const { t } = useTranslation();
+  const theme = useTheme();
 
   return (
     <Box padding={5} sx={{ backgroundColor: amber[50] }}>
@@ -35,6 +44,9 @@ export default function WorkingProgress() {
             >
               {homeData.workingDescription}
             </Typography>
+
+            <Box></Box>
+
             <Typography
               sx={{
                 fontFamily: 'serif',
@@ -68,7 +80,7 @@ export default function WorkingProgress() {
                         fontWeight: 800,
                         fontSize: 20,
                         color: teal[900],
-                        lineHeight: 2,
+                        lineHeight: 1.75,
                       }}
                     >
                       {item.title}
@@ -80,7 +92,7 @@ export default function WorkingProgress() {
                         fontWeight: 400,
                         fontSize: 20,
                         color: teal[900],
-                        lineHeight: 2,
+                        lineHeight: 1.75,
                       }}
                     >
                       {item.content.join(', ')}
@@ -89,6 +101,76 @@ export default function WorkingProgress() {
                 </ListItem>
               ))}
             </List>
+
+            <Box></Box>
+
+            <Typography
+              sx={{
+                fontFamily: 'serif',
+                fontWeight: 800,
+                fontSize: 35,
+                color: teal[900],
+                textDecoration: 'underline',
+              }}
+            >
+              {t('porfolio.product_completion')}
+            </Typography>
+            <Box></Box>
+            <Grid2
+              container
+              sx={{
+                overflow: 'hidden',
+                borderRadius: 4,
+                boxShadow: `-10px 10px ${teal[900]}`,
+                border: `1px solid ${teal[900]}`,
+              }}
+            >
+              {productsData.map((item, index) => (
+                <Grid2
+                  size={6}
+                  padding={2}
+                  height={150}
+                  sx={{
+                    background: theme.palette.secondary.main,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignContent: 'center',
+                    alignItems: 'center',
+                    borderRight:
+                      index % 2 === 0
+                        ? `2px solid ${theme.palette.primary.main}`
+                        : undefined,
+                    borderTop:
+                      index / 2 >= 1
+                        ? `2px solid ${theme.palette.primary.main}`
+                        : undefined,
+                  }}
+                >
+                  <Stack>
+                    <Typography
+                      sx={{
+                        fontSize: 15,
+                        fontWeight: 800,
+                        textAlign: 'center',
+                        fontFamily: 'sans-serif',
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontSize: 40,
+                        fontWeight: 800,
+                        textAlign: 'center',
+                        fontFamily: 'sans-serif',
+                      }}
+                    >
+                      {item.content}
+                    </Typography>
+                  </Stack>
+                </Grid2>
+              ))}
+            </Grid2>
           </Stack>
         </Grid2>
         <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }} paddingLeft={6}>

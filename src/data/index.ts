@@ -162,3 +162,22 @@ export const skillData = [
     content: ['OWASP', 'UML', 'C4 model', 'Sequence Diagram', 'Class Diagram'],
   },
 ];
+
+export const productsData = [
+  {
+    title: 'Products',
+    content: '30+',
+  },
+  {
+    title: 'Customers',
+    content: '30+',
+  },
+  {
+    title: 'Total Downloads',
+    content: '300k+',
+  },
+  {
+    title: 'Average Rating',
+    content: '4.1 ⭐',
+  },
+];

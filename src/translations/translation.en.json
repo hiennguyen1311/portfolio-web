@@ -35,6 +35,7 @@
     "explore": "Explore"
   },
   "porfolio": {
-    "working_experience": "Working Experience"
+    "working_experience": "Working Experience",
+    "product_completion": "Products Completion"
   }
 }

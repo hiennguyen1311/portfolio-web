@@ -23,6 +23,7 @@ export default function Education() {
                           fontWeight: 800,
                           fontSize: 25,
                           color: amber[50],
+                          lineHeight: 1.2,
                         }}
                       >
                         {item.title}
