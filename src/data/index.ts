@@ -170,7 +170,7 @@ export const productsData = [
   },
   {
     title: 'Customers',
-    content: '30+',
+    content: '20+',
   },
   {
     title: 'Total Downloads',

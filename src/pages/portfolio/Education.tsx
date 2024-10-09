@@ -10,7 +10,7 @@ export default function Education() {
   return (
     <Box padding={5}>
       <Grid2 container display={'flex'}>
-        <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }}>
+        <Grid2 size={{ xs: 12, sm: 12, md: 6, xl: 6, lg: 6 }}>
           <List disablePadding>
             <Grid2 container spacing={4}>
               {map(reverse([...homeData.educations]), (item) => (
@@ -66,11 +66,11 @@ export default function Education() {
           </List>
         </Grid2>
         <Grid2
-          size={{ xs: 12, sm: 6, xl: 6, lg: 6 }}
+          size={{ xs: 12, sm: 12, md: 6, xl: 6, lg: 6 }}
           justifyContent={'flex-end'}
           display={'flex'}
         >
-          <Stack spacing={1} alignContent={'flex-end'}>
+          <Stack spacing={2} alignContent={'flex-end'}>
             <Typography
               sx={{
                 fontFamily: 'serif',
@@ -79,6 +79,7 @@ export default function Education() {
                 color: amber[50],
                 textDecoration: 'underline',
                 textAlign: 'right',
+                lineHeight: 0.5,
               }}
             >
               {t('home.education_certification')}

@@ -26,10 +26,10 @@ export default function ContactPage() {
             <Box
               sx={{
                 backgroundColor: teal[900],
-                borderRadius: 4,
+                borderRadius: 5,
                 width: 200,
                 aspectRatio: 1,
-                boxShadow: `-5px 5px${teal[800]}`,
+                boxShadow: `-5px 5px${teal[600]}`,
                 marginRight: 2,
                 alignItems: 'center',
                 alignContent: 'center',
@@ -94,18 +94,23 @@ export default function ContactPage() {
               </Stack>
             </Grid2>
           </Grid2>
-          <Grid2 container spacing={2} width={'100%'}>
+          <Grid2 container spacing={2.5} width={'100%'}>
             {contactData.data.map((item) => (
               <Grid2 size={{ xs: 12, md: 6, sm: 6, lg: 4, xl: 4 }}>
                 <Box
-                  sx={{ background: teal[900], borderRadius: 4, padding: 2 }}
+                  sx={{
+                    background: amber[700],
+                    borderRadius: 4,
+                    padding: 2,
+                    boxShadow: `-7px 7px${teal[900]}`,
+                    border: `1px solid ${teal[900]}`,
+                  }}
                 >
                   <Stack spacing={1}>
                     <Stack direction={'row'} spacing={1} alignItems={'center'}>
-                      {<item.icon sx={{ color: amber[700] }}></item.icon>}
+                      {<item.icon></item.icon>}
                       <Typography
                         sx={{
-                          color: amber[700],
                           fontSize: 25,
                           fontWeight: 800,
                           fontFamily: 'sans-serif',
@@ -117,7 +122,7 @@ export default function ContactPage() {
                     <Box>
                       <Button
                         sx={{
-                          backgroundColor: amber[700],
+                          backgroundColor: teal[900],
                           height: 25,
                           paddingLeft: 2,
                           paddingRight: 2,
@@ -126,7 +131,7 @@ export default function ContactPage() {
                       >
                         <Typography
                           sx={{
-                            color: 'black',
+                            color: amber[700],
                             fontSize: 15,
                             fontFamily: 'sans-serif',
                             fontWeight: 600,

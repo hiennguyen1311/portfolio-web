@@ -12,9 +12,9 @@ export default function Introduction() {
         paddingBottom: 4,
       }}
     >
-      <Grid2 container>
+      <Grid2 container rowSpacing={2}>
         <Grid2
-          size={{ xs: 12, sm: 6, xl: 6, lg: 6 }}
+          size={{ xs: 12, sm: 12, md: 6, xl: 6, lg: 6 }}
           justifyContent={'center'}
           alignItems={'center'}
           alignContent={'center'}
@@ -46,7 +46,7 @@ export default function Introduction() {
         </Grid2>
 
         <Grid2
-          size={{ xs: 12, sm: 6, xl: 6, lg: 6 }}
+          size={{ xs: 12, sm: 12, md: 6, xl: 6, lg: 6 }}
           justifyContent={'center'}
           alignItems={'center'}
           alignContent={'center'}
@@ -58,7 +58,7 @@ export default function Introduction() {
               width: '60%',
               aspectRatio: 1,
               backgroundColor: teal[900],
-              boxShadow: `-15px 15px ${teal[800]}`,
+              boxShadow: `-15px 15px ${teal[600]}`,
               display: 'flex',
               padding: 4,
             }}

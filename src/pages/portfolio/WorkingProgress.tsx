@@ -17,9 +17,9 @@ export default function WorkingProgress() {
   const theme = useTheme();
 
   return (
-    <Box padding={5} sx={{ backgroundColor: amber[50] }}>
-      <Grid2 container>
-        <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }} paddingRight={3}>
+    <Box padding={5} paddingTop={4} sx={{ backgroundColor: amber[50] }}>
+      <Grid2 container rowSpacing={3}>
+        <Grid2 size={{ xs: 12, sm: 12, xl: 6, lg: 6 }} paddingRight={3}>
           <Stack spacing={1}>
             <Typography
               sx={{
@@ -173,7 +173,7 @@ export default function WorkingProgress() {
             </Grid2>
           </Stack>
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, xl: 6, lg: 6 }} paddingLeft={6}>
+        <Grid2 size={{ xs: 12, sm: 12, xl: 6, lg: 6 }} paddingLeft={2}>
           <List disablePadding>
             {map(reverse([...homeData.workingExperience]), (item, index) => (
               <ListItem key={item.year} disablePadding>
@@ -221,7 +221,6 @@ export default function WorkingProgress() {
                         fontWeight: 800,
                         fontSize: 25,
                         color: teal[900],
-                        textAlign: 'justify',
                       }}
                     >
                       {item.companyName}
