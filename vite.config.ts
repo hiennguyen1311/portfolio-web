@@ -28,7 +28,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  base: '/',
+  base: '/assistant/',
   server: { port: Number(process.env.PORT) },
   resolve: {
     alias: {
