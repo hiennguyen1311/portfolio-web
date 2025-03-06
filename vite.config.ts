@@ -20,10 +20,10 @@ export default defineConfig({
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'img';
           }
-          return `${extType}/[name]-[hash][extname]`;
+          return `portfolio_assets/${extType}/[name]-[hash][extname]`;
         },
-        chunkFileNames: '[name]-[hash].js',
-        entryFileNames: '[name]-[hash].js',
+        chunkFileNames: 'portfolio_assets/[name]-[hash].js',
+        entryFileNames: 'portfolio_assets/[name]-[hash].js',
       },
     },
   },
