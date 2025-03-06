@@ -1,10 +1,14 @@
 import { Components, CssVarsTheme, Theme } from '@mui/material';
-import { blue } from '@mui/material/colors';
+import { blue, teal } from '@mui/material/colors';
 
 export const componentStyledOverride: Components<
   Omit<Theme, 'components' | 'palette'> & CssVarsTheme
 > = {
-  MuiButton: { styleOverrides: { root: { borderRadius: 50, height: 40 } } },
+  MuiButton: {
+    styleOverrides: {
+      root: { borderRadius: 50, height: 40, background: teal[900] },
+    },
+  },
   MuiTextField: {
     defaultProps: {
       variant: 'outlined',

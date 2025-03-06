@@ -17,19 +17,26 @@
     "login": "Login",
     "failed": "Login Failed!!!"
   },
-  "main_conversations": {
-    "new_conversation": "New Conversation"
-  },
   "profile": {
     "logout": "Logout"
   },
-  "messages": {
-    "error": "PuHi cannot create magic! Please try again!",
-    "model": "Model"
+  "home": {
+    "title": "Home",
+    "projects": "Porjects",
+    "portfolio": "Portfolio",
+    "contacts": "Contacts",
+    "services": "Services",
+    "read_more": "Read More",
+    "working_progress": "Working Progress",
+    "education_certification": "Education & Certification",
+    "go_to_home": "Go to Home"
   },
-  "conversations": {
-    "rename": "Rename",
-    "delete": "Delete",
-    "update_name": "Update Name"
+  "contacts": {
+    "explore": "Explore"
+  },
+  "porfolio": {
+    "working_experience": "Working Experience",
+    "product_completion": "Products Completion",
+    "see_details": "See Details"
   }
 }

@@ -1,11 +1,20 @@
 import { routeList } from '@constants';
-import { MainPage } from '../pages/main';
 import { RouteObject } from 'react-router-dom';
+import { ContactPage, HomePage, PortfolioPage } from '@pages';
+import { DefaultRoute } from './DefaultRoute';
 
 export const mainRoutesList: RouteObject[] = [
-  { index: true, element: <MainPage></MainPage> },
+  { index: true, element: <DefaultRoute></DefaultRoute> },
   {
-    path: routeList.main,
-    element: <MainPage></MainPage>,
+    path: routeList.home,
+    element: <HomePage></HomePage>,
+  },
+  {
+    path: routeList.portfolio,
+    element: <PortfolioPage></PortfolioPage>,
+  },
+  {
+    path: routeList.contacts,
+    element: <ContactPage></ContactPage>,
   },
 ];

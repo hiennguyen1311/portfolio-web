@@ -4,3 +4,6 @@ export * from './not-found';
 export * from './landing-page';
 export * from './main';
 export * from './authentication';
+export * from './home';
+export * from './contact';
+export * from './portfolio';
