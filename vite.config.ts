@@ -20,15 +20,15 @@ export default defineConfig({
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
             extType = 'img';
           }
-          return `porfolio_assets/${extType}/[name]-[hash][extname]`;
+          return `portfolio_assets/${extType}/[name]-[hash][extname]`;
         },
-        chunkFileNames: 'porfolio_assets/[name]-[hash].js',
-        entryFileNames: 'porfolio_assets/[name]-[hash].js',
+        chunkFileNames: 'portfolio_assets/[name]-[hash].js',
+        entryFileNames: 'portfolio_assets/[name]-[hash].js',
       },
     },
   },
   plugins: [react()],
-  base: '/porfolio_assets/',
+  base: '/portfolio_assets/',
   server: { port: Number(process.env.PORT) },
   resolve: {
     alias: {
