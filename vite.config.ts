@@ -28,6 +28,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: '/',
   server: { port: Number(process.env.PORT) },
   resolve: {
     alias: {
