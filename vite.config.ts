@@ -28,6 +28,7 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: '/porfolio_assets/',
   server: { port: Number(process.env.PORT) },
   resolve: {
     alias: {
