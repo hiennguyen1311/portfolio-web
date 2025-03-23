@@ -42,10 +42,6 @@ export default function MainPage() {
         onOpen={sidebar.onOpen}
       ></AppBar>
 
-      {/* <SideBar {...sidebar}>
-        <Box></Box>
-      </SideBar> */}
-
       <Main open={sidebar.open}>
         <Outlet></Outlet>
       </Main>

@@ -26,10 +26,6 @@ const StyledAppBar = styled(MuiAppBar, {
 })<AppBarProps>(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
   backgroundColor: teal[900],
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
   variants: [
     {
       props: ({ open }) => open,
@@ -53,16 +49,16 @@ export default function AppBar({ open, isLoading }: AppBarProps) {
   function NavItem(title: string, selected: boolean, key: string) {
     return (
       <ButtonBase
+        key={key}
         onClick={() => navigate(`./${key}`)}
         sx={{
           textAlign: 'center',
-          paddingTop: 1,
-          paddingBottom: 1,
+          paddingY: 1,
+          paddingX: 2,
           ...(selected && {
             backgroundColor: amber[700],
             borderRadius: 25,
-            paddingLeft: 3,
-            paddingRight: 3,
+            paddingX: 3,
           }),
         }}
       >
@@ -82,30 +78,22 @@ export default function AppBar({ open, isLoading }: AppBarProps) {
 
   return (
     <StyledAppBar position="fixed" open={open}>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        {/* <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          onClick={onOpen}
-          edge="start"
-          sx={open ? { display: 'none' } : {}}
+      <Toolbar>
+        <Stack
+          direction={'row'}
+          sx={{
+            display: 'flex',
+            width: '100%',
+          }}
+          justifyContent={{ xs: 'center', xl: 'flex-end' }}
         >
-          <MenuIcon />
-        </IconButton> */}
-        <Box></Box>
-
-        <Stack direction={'row'}>
-          <ListItem>
-            {navMenu.map((item) => (
-              <ListItem key={item.key}>
-                {NavItem(
-                  item.title,
-                  isEqual(`/${item.key}`, location.pathname),
-                  item.key,
-                )}
-              </ListItem>
-            ))}
-          </ListItem>
+          {navMenu.map((item) =>
+            NavItem(
+              item.title,
+              isEqual(`/${item.key}`, location.pathname),
+              item.key,
+            ),
+          )}
         </Stack>
       </Toolbar>
 

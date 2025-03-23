@@ -7,6 +7,7 @@ import {
   YouTube,
 } from '@mui/icons-material';
 import avatar from './assets/avatar.png';
+export * from './home.data';
 
 export const homeData = {
   name: 'Nguyen Phuc Hien',
@@ -80,7 +81,12 @@ export const contactData = {
     {
       key: 'website',
       icon: Language,
-      content: 'http://nguyenphuchien.me',
+      content: 'http://nguyenphuchien.com',
+    },
+    {
+      key: 'linkedin',
+      icon: LinkedIn,
+      content: 'https://linkedin.com',
     },
     {
       key: 'facebook',
@@ -91,11 +97,6 @@ export const contactData = {
       key: 'youtube',
       icon: YouTube,
       content: 'https://youtube.com',
-    },
-    {
-      key: 'linkedin',
-      icon: LinkedIn,
-      content: 'https://linkedin.com',
     },
     {
       key: 'tiktok',

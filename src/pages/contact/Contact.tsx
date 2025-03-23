@@ -17,12 +17,24 @@ export default function ContactPage() {
       sx={{
         width: '100%',
         background: teal[900],
-        height: 'calc(100vh - 70px)',
       }}
     >
       <Box sx={{ backgroundColor: amber[50], height: '100%' }} padding={3}>
-        <Stack spacing={3} alignItems={'center'}>
-          <Grid2 container width={'100%'}>
+        <Stack
+          spacing={3}
+          width={'100%'}
+          alignItems={'center'}
+          display={'flex'}
+        >
+          <Grid2
+            width={'100%'}
+            alignItems={'center'}
+            justifyContent={'center'}
+            alignContent={'center'}
+            display={'flex'}
+            direction={'row'}
+            container
+          >
             <Box
               sx={{
                 backgroundColor: teal[900],
@@ -55,13 +67,14 @@ export default function ContactPage() {
                 ></img>
               </Box>
             </Box>
-            <Grid2 size={{ md: 12, xs: 12, sm: 12, lg: 6, xl: 6 }}>
+            <Stack>
               <Typography
                 sx={{
                   color: amber[700],
                   fontWeight: 800,
                   fontSize: 50,
                   fontFamily: 'sans-serif',
+                  textAlign: 'center',
                 }}
               >
                 {homeData.name}
@@ -92,11 +105,15 @@ export default function ContactPage() {
                   {contactData.phone}
                 </Typography>
               </Stack>
-            </Grid2>
+            </Stack>
           </Grid2>
-          <Grid2 container spacing={2.5} width={'100%'}>
+          <Grid2
+            spacing={2.5}
+            width={{ xs: '100%', sm: '90%', md: '70%', lg: '50%' }}
+            container
+          >
             {contactData.data.map((item) => (
-              <Grid2 size={{ xs: 12, md: 6, sm: 6, lg: 4, xl: 4 }}>
+              <Grid2 size={{ xs: 12, md: 6, xl: 4 }}>
                 <Box
                   sx={{
                     background: amber[700],

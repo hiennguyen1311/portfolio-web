@@ -1,4 +1,4 @@
-export const drawerWidth = 300;
+export const drawerWidth = 0;
 
 export const drawerMinWidth = 0;
 
