@@ -2,7 +2,6 @@ import {
   Box,
   ButtonBase,
   LinearProgress,
-  ListItem,
   Stack,
   styled,
   Toolbar,
