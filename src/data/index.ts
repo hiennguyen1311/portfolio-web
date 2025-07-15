@@ -62,9 +62,9 @@ export const homeData = {
       contents: ['Computer Sicence Bachelor Degree'],
     },
     {
-      year: '2016',
+      year: '2025',
       title: 'English',
-      contents: ['TOEIC 750'],
+      contents: ['TOEIC 805'],
     },
     {
       year: '2020',

@@ -60,8 +60,9 @@ export default function HomePage() {
                     fontSize: 35,
                     fontFamily: 'sans-serif',
                     background: index ? amber[800] : 'none',
-                    borderRadius: index ? 4 : 0,
-                    p: index ? 1 : 0,
+                    borderRadius: index ? 16 : 0,
+                    p: index ? 2 : 0,
+                    py: index ? 1 : 0,
                   }}
                 >
                   {text}
