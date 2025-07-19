@@ -7,7 +7,8 @@
     "dev": "vite --port 3000 --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:portfolio": "yarn dev"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
