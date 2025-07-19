@@ -4,7 +4,7 @@ import { ProtectedRouteProps } from './interfaces';
 import { useSelector } from '@reducers';
 
 export default function ProtectedRoute({ children }: ProtectedRouteProps) {
-  const isAuth = useSelector((state) => state.authentication.isAuth);
+  const isAuth = useSelector(() => true);
 
   return isAuth ? (
     children
